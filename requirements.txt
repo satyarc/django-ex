@@ -5,6 +5,4 @@ psycopg2==2.6.1
 whitenoise==3.0
 spacy
 requests
-collections
-json
-en_core_web_md
+
