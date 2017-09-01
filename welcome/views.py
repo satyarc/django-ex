@@ -4,7 +4,7 @@ from django.conf import settings
 from django.http import HttpResponse
 from . import database
 import spacy
-import en_core_web_md
+import en_core_web_sm
 import json
 import requests
 from collections import Counter
