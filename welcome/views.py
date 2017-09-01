@@ -64,7 +64,7 @@ def fetchNewsFromSources():
 # Create your views here.
 
 def index(request):
-    nlp = en_core_web_md.load()               
+    nlp = en_core_web_sm.load()               
     doc = nlp(fetchNewsFromSources())             
     cleaned_list = [cleanup(word.string) for word in doc if not isNoise(word)]
     return render(request, 'welcome/index.html', {
