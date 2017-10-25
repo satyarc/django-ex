@@ -8,6 +8,7 @@ import en_core_web_sm
 import json
 import requests
 from collections import Counter
+import nsepy as nsp
 
 noisy_pos_tags = ["PROP","DET","PART","CCONJ","ADP","PRON","VERB","ADJ"]
 min_token_length = 2
