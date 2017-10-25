@@ -62,13 +62,19 @@ def fetchNewsFromSources():
     return docFromSources
 
 # Create your views here.
-
+'''
 def index(request):
     nlp = en_core_web_sm.load()               
     doc = nlp(fetchNewsFromSources())             
     cleaned_list = [cleanup(word.string) for word in doc if not isNoise(word)]
     return render(request, 'welcome/index.html', {
         'listOfWords': cleaned_list
+    })
+'''
+def index(request):
+    data = nsp.get_history(symbol = trade_name, start = date.today(),end = date.today())
+    return render(request, 'welcome/index.html', {
+        'Closing': data.Close
     })
 
 def health(request):
